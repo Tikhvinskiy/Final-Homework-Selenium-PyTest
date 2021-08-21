@@ -10,11 +10,11 @@ class ProductPage(BasePage):
     def check_product_name_and_adding(self):
         assert self.is_element_present(*ProductPageLocators.PRODUCT_NAME), (
             "there is no product name")
-        assert self.is_element_present(*ProductPageLocators.ADDING_MESSAGE), (
+        assert self.is_element_present(*ProductPageLocators.ADDING_PRODUCT), (
             "there is no adding message")
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        message = self.browser.find_element(*ProductPageLocators.ADDING_MESSAGE).text
-        assert product_name in message, "there is no product name in the message"
+        add_message = self.browser.find_element(*ProductPageLocators.ADDING_PRODUCT).text
+        assert product_name == add_message, "there is no product name in the message"
 
     def check_message_basket_total(self):
         assert self.is_element_present(*ProductPageLocators.MESSAGE_BASKET_TOTAL), (
@@ -23,4 +23,4 @@ class ProductPage(BasePage):
             "there is no product price")
         message_basket_total = self.browser.find_element(*ProductPageLocators.MESSAGE_BASKET_TOTAL).text
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
-        assert product_price in message_basket_total, "there is no product price"
+        assert product_price == message_basket_total, "there is no product price"
