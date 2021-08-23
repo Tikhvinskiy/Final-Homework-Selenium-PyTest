@@ -12,8 +12,8 @@ class BasePage:
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-    def go_to_basket(self):
-        pass
+    def check_registration_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "Registration has failed"
 
     def go_to_login_page(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "There is no login link"
