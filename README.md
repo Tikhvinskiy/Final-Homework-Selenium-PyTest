@@ -9,15 +9,15 @@ ImportError: attempted relative import with no known parent package
 
 В файле test_product_page.py:
 
-from .pages.basket_page import BasketPage
-from .pages.product_page import ProductPage
-from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage\
+from .pages.product_page import ProductPage\
+from .pages.login_page import LoginPage\
 
 В файле test_main_page.py:
 
-from .pages.main_page import MainPage
-from .pages.login_page import LoginPage
-from .pages.basket_page import BasketPage
+from .pages.main_page import MainPage\
+from .pages.login_page import LoginPage\
+from .pages.basket_page import BasketPage\
 
 ##### 2) Если такая ошибка:
 ValueError: option names {'--browser_name'} already added
