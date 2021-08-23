@@ -1,7 +1,7 @@
 # Финальное задание курса "Автоматизация тестирования с помощью Selenium и Python"
 
 ##### Пометка проверяющим:
-###### 1) Если появляются ошибки связанные с имортом:
+##### 1) Если появляются ошибки связанные с имортом:
  from .pages.basket_page import BasketPage
 ImportError: attempted relative import with no known parent package
 
@@ -17,7 +17,7 @@ from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.basket_page import BasketPage
 
-###### 2) Если такая ошибка:
+##### 2) Если такая ошибка:
 ValueError: option names {'--browser_name'} already added
 
 У вас есть, например, в верхнем каталоге, дубликат файла conftest.py
